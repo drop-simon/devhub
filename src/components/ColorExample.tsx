@@ -15,20 +15,11 @@ export default function ColorExample() {
     outputRange: ['red', 'blue'],
   })
 
-  const translateY = animatedValue.interpolate({
-    inputRange: [0, 1],
-    outputRange: [0, -50],
-  })
-
   return (
     <View style={styles.container}>
-      <Animated.View
-        style={[
-          styles.circle,
-          { backgroundColor, transform: [{ translateY }] },
-        ]}
-      />
-
+      <Animated.View style={[styles.circle, { backgroundColor }]}>
+        <Text style={styles.text}>{value.toFixed(2)}</Text>
+      </Animated.View>
       <Slider
         minimumValue={0}
         maximumValue={1}
