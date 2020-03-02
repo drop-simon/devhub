@@ -6,10 +6,9 @@ export default function MultipleInterpolationExample() {
   const [didSlideUp, setDidSlideUp] = useState(false)
 
   function handlePress() {
-    Animated.timing(animatedValue, {
+    Animated.spring(animatedValue, {
       toValue: didSlideUp ? 0 : 1,
-      duration: 300,
-      easing: Easing.sin,
+      tension: 200,
     }).start()
     setDidSlideUp(!didSlideUp)
   }
