@@ -44,7 +44,7 @@ const styles = StyleSheet.create({
     flex: 1,
     justifyContent: 'center',
     alignItems: 'center',
-    backgroundColor: 'lightgrey',
+    backgroundColor: '#f6f6f6',
   },
   circle: {
     width: 200,

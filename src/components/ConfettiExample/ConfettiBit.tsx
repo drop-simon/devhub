@@ -1,6 +1,8 @@
 import React from 'react'
 import { Animated, StyleSheet } from 'react-native'
 
+export const CONFETTI_WIDTH = 20
+
 export default function ConfettiBit({
   style,
   color,
@@ -17,7 +19,7 @@ export default function ConfettiBit({
 
 const styles = StyleSheet.create({
   confettiBit: {
-    width: 25,
+    width: CONFETTI_WIDTH,
     height: 10,
     borderRadius: 5,
   },

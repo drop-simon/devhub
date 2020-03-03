@@ -5,8 +5,8 @@ import ConfettiVisualization from './src/components/ConfettiVisualization'
 import ConfettiExample from './src/components/ConfettiExample'
 
 export default function App() {
-  // return <ColorExample />
+  return <ColorExample />
   // return <MultipleInterpolationExample />
   // return <ConfettiVisualization />
-  return <ConfettiExample />
+  // return <ConfettiExample />
 }
