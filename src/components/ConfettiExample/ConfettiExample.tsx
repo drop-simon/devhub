@@ -3,7 +3,6 @@ import {
   View,
   Animated,
   StyleSheet,
-  Button,
   Easing,
   Dimensions,
   TouchableOpacity,
@@ -21,9 +20,9 @@ export const CONFETTI_COLORS = [
 ]
 const NUM_CONFETTI = 100
 
-const { width: deviceWidth, height: deviceHeight } = Dimensions.get('screen')
-
 export default function ConfettiExample() {
+  const { width: deviceWidth, height: deviceHeight } = Dimensions.get('screen')
+
   const [animatedValue] = useState(new Animated.Value(0))
   const [confettiStyles] = useState(
     Array(NUM_CONFETTI)
@@ -37,7 +36,8 @@ export default function ConfettiExample() {
         })
 
         const startY = -CONFETTI_WIDTH - Math.random() * deviceHeight
-        const endY = deviceHeight + Math.random() * deviceHeight
+        const endY =
+          deviceHeight + CONFETTI_WIDTH + Math.random() * deviceHeight
         const translateY = animatedValue.interpolate({
           inputRange: [0, 1],
           outputRange: [startY, endY],
