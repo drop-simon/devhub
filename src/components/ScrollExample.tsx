@@ -1,39 +1,25 @@
 import React, { useState } from 'react'
-import { Animated, StyleSheet, Dimensions, Text } from 'react-native'
+import {
+  Animated,
+  ScrollView,
+  Image,
+  StyleSheet,
+  Dimensions,
+  Text,
+} from 'react-native'
 
 const HERO_IMAGE_HEIGHT = 300
 
 export default function ScrollExample() {
   const deviceWidth = Dimensions.get('screen').width
-  const [offset] = useState(new Animated.Value(0))
-
-  const translateY = offset.interpolate({
-    inputRange: [-HERO_IMAGE_HEIGHT, 0],
-    outputRange: [-HERO_IMAGE_HEIGHT * 0.5, 0],
-    extrapolateRight: 'clamp',
-  })
-
-  const scale = offset.interpolate({
-    inputRange: [-HERO_IMAGE_HEIGHT, 0],
-    outputRange: [2, 1],
-    extrapolateRight: 'clamp',
-  })
 
   return (
-    <Animated.ScrollView
-      onScroll={Animated.event(
-        [{ nativeEvent: { contentOffset: { y: offset } } }],
-        { useNativeDriver: true }
-      )}
-      scrollEventThrottle={16}
-      style={styles.container}
-    >
-      <Animated.Image
+    <ScrollView style={styles.container}>
+      <Image
         source={{ uri: 'https://unsplash.it/400/300' }}
         style={{
           width: deviceWidth,
           height: HERO_IMAGE_HEIGHT,
-          transform: [{ translateY }, { scale }],
         }}
         resizeMode="cover"
       />
@@ -119,7 +105,7 @@ export default function ScrollExample() {
         commodi. Quidem eius voluptas maiores, aut dignissimos, vitae corrupti
         labore, quo facilis magnam animi quas porro.
       </Text>
-    </Animated.ScrollView>
+    </ScrollView>
   )
 }
 

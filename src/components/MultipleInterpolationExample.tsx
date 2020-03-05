@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import { View, Animated, StyleSheet, Button, Easing } from 'react-native'
+import { View, Animated, StyleSheet, Button } from 'react-native'
 
 export default function MultipleInterpolationExample() {
   const [animatedValue] = useState(new Animated.Value(0))
