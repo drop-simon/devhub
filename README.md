@@ -19,7 +19,7 @@ _ANDROID ONLY_: download the Expo app from the play store
 ### 3. Install Node Modules & Start Packager
 
 ```
-npm i node modules
+npm install
 expo start
 ```
 
