@@ -91,7 +91,7 @@ export default function ConfettiExample() {
               />
             )
           })}
-        <Button title={step === 3 ? 'reset' : 'next'} onPress={goToNextStep} />
+        <Button title={step === 4 ? 'reset' : 'next'} onPress={goToNextStep} />
         <Text></Text>
       </View>
     </View>
