@@ -23,7 +23,7 @@ export default function ConfettiExample() {
       duration: 1000,
       useNativeDriver: true,
     }).start(() => {
-      if (nextStep === 4) {
+      if (nextStep === 5) {
         setStep(0)
         animatedValue.setValue(0)
       } else {
@@ -42,8 +42,9 @@ export default function ConfettiExample() {
             const startY = i * -10
 
             const translateX = animatedValue.interpolate({
-              inputRange: [0, 1, 2, 3, 4],
+              inputRange: [0, 1, 2, 3, 4, 5],
               outputRange: [
+                0,
                 0,
                 startX,
                 startX,
@@ -55,9 +56,10 @@ export default function ConfettiExample() {
             })
 
             const translateY = animatedValue.interpolate({
-              inputRange: [0, 1, 2, 3, 4],
+              inputRange: [0, 1, 2, 3, 4, 5],
               outputRange: [
                 0,
+                startY,
                 startY,
                 startY - Y_OFFSETS[i % Y_OFFSETS.length],
                 startY + Y_OFFSETS[i % Y_OFFSETS.length] + MOCK_PHONE_HEIGHT,
@@ -66,8 +68,9 @@ export default function ConfettiExample() {
             })
 
             const rotate = animatedValue.interpolate({
-              inputRange: [0, 1, 2, 3, 4],
+              inputRange: [0, 1, 2, 3, 4, 5],
               outputRange: [
+                '0deg',
                 '0deg',
                 '0deg',
                 `${ROTATE_START_AMOUNTS[i % ROTATE_START_AMOUNTS.length]}deg`,

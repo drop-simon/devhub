@@ -1,5 +1,7 @@
 # Demystifying React Native's Animated API
 
+[talk slides can be found here](https://docs.google.com/presentation/d/1-9lbVlTlGBrlVyJ8bnolU4EwqLLoF0g7jHEpC4RAU7w/edit?usp=sharing)
+
 ## Participation Instructions
 
 ### 1. Clone this repo
