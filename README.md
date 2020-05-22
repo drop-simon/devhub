@@ -16,7 +16,7 @@ git clone git@github.com:drop-simon/devhub.git
 npm install -g expo-cli
 ```
 
-_ANDROID ONLY_: download the Expo app from the play store
+_If developing on an Android phone_: download the Expo app from the play store
 
 ### 3. Install Node Modules & Start Packager
 
